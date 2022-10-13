@@ -1,121 +1,193 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Assignment-7 Treasure Hunt</title>
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+<head>
+    <title>Assignment-7 Treasure Hunt</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"   
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script> 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" 
-        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
-        </head>
-    <body>
-        <h1>Navya Ravipati Treasure Hunt</h1>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+</head>
 
-        <div>Click on the chests to search for treasure</div>
-        <p id="chests">Number of chests checked is zero.</p>
-        <div id="score">Score is unknown.</div>
-        <p id="help">Help report</p>
+<body>
+    <h1>Navya Ravipati Treasure Hunt</h1>
+    <div style="background-color: lightblue;color:brown">Click on the chests to search for treasure</div>
+    <div id="chests" style="background-color: greenyellow; color: black;">Number of chests checked is zero</div>
+    <div id="score" style="background-color: yellow; color: red;">Score is unknown</div>
+    <div style="background-color: red; color: black;" id="help">Help report</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100" id="image0"
+                    onClick="check(0)">
+            </div>
+            <div class="col-sm">
+                <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100" id="image1"
+                    onClick="check(1)">
+            </div>
+            <div class="col-sm">
+                <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100" id="image2"
+                    onClick="check(2)">
+            </div>
+            <div class="col-sm">
+                <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100" id="image3"
+                    onClick="check(3)">
+            </div>
+            <div class="col-sm">
+                <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100" id="image4"
+                    onClick="check(4)">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100" id="image5"
+                    onClick="check(5)">
+            </div>
+            <div class="col-sm">
+                <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100" id="image6"
+                    onClick="check(6)">
+            </div>
+            <div class="col-sm">
+                <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100" id="image7"
+                    onClick="check(7)">
+            </div>
+            <div class="col-sm">
+                <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100" id="image8"
+                    onClick="check(8)">
+            </div>
+            <div class="col-sm">
+                <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100" id="image9"
+                    onClick="check(9)">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100" id="image10"
+                    onClick="check(10)">
+            </div>
+            <div class="col-sm">
+                <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100" id="image11"
+                    onClick="check(11)">
+            </div>
+            <div class="col-sm">
+                <img src="Help.jpg" alt="Help" width="100" height="100" id="image12" onClick="help()">
+            </div>
+            <div class="col-sm">
+                <img src="treasurechest.jpg" alt="Treasure Chest" width="100" height="100" id="image13"
+                    onClick="check(13)">
+            </div>
+            <div class="col-sm">
+                <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100" id="image14"
+                    onClick="check(14)">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100" id="image15"
+                    onClick="check(15)">
+            </div>
+            <div class="col-sm">
+                <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100" id="image16"
+                    onClick="check(16)">
+            </div>
+            <div class="col-sm">
+                <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100" id="image17"
+                    onClick="check(17)">
+            </div>
+            <div class="col-sm">
+                <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100" id="image18"
+                    onClick="check(18)">
+            </div>
+            <div class="col-sm">
+                <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100" id="image19"
+                    onClick="check(19)">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100" id="image20"
+                    onClick="check(20)">
+            </div>
+            <div class="col-sm">
+                <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100" id="image21"
+                    onClick="check(21)">
+            </div>
+            <div class="col-sm">
+                <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100" id="image22"
+                    onClick="check(22)">
+            </div>
+            <div class="col-sm">
+                <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100" id="image23"
+                    onClick="check(23)">
+            </div>
+            <div class="col-sm">
+                <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100" id="image24"
+                    onClick="check(24)">
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script>
+    let ids = ["image0", "image1", "image2", "image3", "image4", "image5", "image6", "image7", "image8", "image9", "image10", "image11", "image12", "image13", "image14", "image15", "image16", "image17", "image18", "image19", "image20", "image21", "image22", "image23", "image24"]
+    let chestCount = 0, score = 0, lastCheck = 12,  treasureLocation = 18;
+    function check(position) {
+        id = ids[position]
+        imgElement = document.getElementById(id)
+        if (position === treasureLocation) {
+            imgElement.src = "Treasure.jpg"
+            score++;
+        }
+        else {
+            imgElement.src = "Emptytreasure.jpg"
+            chestCount++
+        }
+        lastCheck = position;
+        document.getElementById("chests").innerHTML = "Number of chests checked is " + chestCount;
+        document.getElementById("score").innerHTML = "Score is " + score;
+    }
+    function help() {
+        col_help = lastCheck % 5;row_help = lastCheck / 5;treasureCol = treasureLocation % 5; treasureRow = treasureLocation / 5;
+        up_side = "";side_direction = "";
+        if (treasureCol > col_help) {
+            side_direction = "Right";
+        }
+        if (treasureCol < col_help) {
+            side_direction = "Left";
+        }
+        if (treasureRow < row_help) {
+            up_side = "Up";
+        }
+        if (treasureRow > row_help) {
+            up_side = "Down";
+        }
+        if (col_help != "" && row_help != "") {
+            document.getElementById("help").innerHTML =
+                side_direction + up_side;
+        } else {
+            document.getElementById("help").innerHTML =
+                "Sorry, no help available.";
+        }
+        score = score + 2;
+        document.getElementById("chests").innerHTML = "Number of chests checked is " + chestCount;
+        document.getElementById("score").innerHTML = "The score is " + score;
+    }
+</script>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-sm">
-                    <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100">
-                </div>
-                <div class="col-sm">
-                    <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100">
-                </div>
-                <div class="col-sm">
-                    <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100">
-                </div>
-                <div class="col-sm">
-                    <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100">
-                </div>
-                <div class="col-sm">
-                    <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100">
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm">
-                    <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100">
-                </div>
-                <div class="col-sm">
-                    <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100">
-                </div>
-                <div class="col-sm">
-                    <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100">
-                </div>
-                <div class="col-sm">
-                    <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100">
-                </div>
-                <div class="col-sm">
-                    <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100">
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm">
-                    <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100">
-                </div>
-                <div class="col-sm">
-                    <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100">
-                </div>
-                <div class="col-sm">
-                    <img src="Help.jpg" alt="Help" width="100" height="100">
-                </div>
-                <div class="col-sm">
-                    <img src="treasurechest.jpg" alt="Treasure Chest" width="100" height="100">
-                </div>
-                <div class="col-sm">
-                    <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100">
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm">
-                    <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100">
-                </div>
-                <div class="col-sm">
-                    <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100">
-                </div>
-                <div class="col-sm">
-                    <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100">
-                </div>
-                <div class="col-sm">
-                    <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100">
-                </div>
-                <div class="col-sm">
-                    <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100">
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm">
-                    <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100">
-                </div>
-                <div class="col-sm">
-                    <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100">
-                </div>
-                <div class="col-sm">
-                    <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100">
-                </div>
-                <div class="col-sm">
-                    <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100">
-                </div>
-                <div class="col-sm">
-                    <img src="treasurechest.jpg" alt="Image of Treasure Chest" width="100" height="100">
-                </div>
-            </div>
-        </div>
-        </div>
-    </body>
 </html>
