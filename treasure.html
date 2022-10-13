@@ -146,7 +146,8 @@
 </body>
 <script>
     let ids = ["image0", "image1", "image2", "image3", "image4", "image5", "image6", "image7", "image8", "image9", "image10", "image11", "image12", "image13", "image14", "image15", "image16", "image17", "image18", "image19", "image20", "image21", "image22", "image23", "image24"]
-    let chestCount = 0, score = 0, lastCheck = 12,  treasureLocation = 18;
+    let chestCount = 0, score = 0, lastCheck = 12, treasureLocation = 18;
+    treasureLocation = getRandomInt(0, 24)
     function check(position) {
         id = ids[position]
         imgElement = document.getElementById(id)
@@ -163,8 +164,8 @@
         document.getElementById("score").innerHTML = "Score is " + score;
     }
     function help() {
-        col_help = lastCheck % 5;row_help = lastCheck / 5;treasureCol = treasureLocation % 5; treasureRow = treasureLocation / 5;
-        up_side = "";side_direction = "";
+        col_help = lastCheck % 5; row_help = lastCheck / 5; treasureCol = treasureLocation % 5; treasureRow = treasureLocation / 5;
+        up_side = ""; side_direction = "";
         if (treasureCol > col_help) {
             side_direction = "Right";
         }
@@ -187,6 +188,11 @@
         score = score + 2;
         document.getElementById("chests").innerHTML = "Number of chests checked is " + chestCount;
         document.getElementById("score").innerHTML = "The score is " + score;
+    }
+    function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
     }
 </script>
 
