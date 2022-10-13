@@ -22,26 +22,33 @@
     <button type="button" class="btn btn-sm btn-primary" onclick="startTime()"> Start Timer</button>
     <button type="button" class="btn btn-sm btn-success" onclick="recordReact()"> React Now</button>
     <script>
-        var myTime;
+        let myTime = undefined;
         function recordReact() {
             myTime = Date.now();
             console.log(myTime);
         }
+
         function startTime() {
-            for (let i = 0; i < 4; i++) {
-                setTimeout(() => {
-                    document.getElementById("countdown").innerHTML = i;
-                }, (3 - i) * 1000);
+            for (let i = 0; i < counter; i++) {
+                setTimeout(function () {
+                    cntdwn = document.getElementById('countdown')
+                    cntdwn.innerHTML = i
+                }, ((counter - i) * 1000))
             }
-            setTimeout(() => {
-                if (myTime == 'undefined') {
-                    document.getElementById("target").innerHTML = "Too Slow";
+            setTimeout(function () {
+                trgt = document.getElementById('target')
+                if (myTime === undefined) {
+                    trgt.innerHTML = "Too Slow"
                 } else {
-                    var btn = Date.now();
-                    btn -= myTime;
-                    document.getElementById("target").innerHTML = "Time was " + btn;
+                    let buttonTime = Date.now();
+                    let diff = buttonTime - myTime
+                    trgt.innerHTML = "Time was " + diff
                 }
-            }, 3000);
+                myTime = undefined
+            }, counter * 1000)
+
         }
+
+      
     </script>
 </body>
